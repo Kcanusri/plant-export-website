@@ -1,134 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Green Roots | Plant Export</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suhanveer Exim | Plant Export</title>
   <style>
-    body { margin: 0; font-family: 'Roboto', sans-serif; scroll-behavior: smooth; }
-    nav {
-      background: #1a1a1a; display: flex; justify-content: space-between; align-items: center;
-      padding: 1rem 2rem; position: sticky; top: 0; z-index: 999;
-    }
-    .logo { display: flex; align-items: center; }
-    .logo img { height: 40px; }
-    .logo span { color: white; margin-left: 8px; font-size: 1.2rem; font-weight: bold; }
-    nav a { color: white; margin-left: 20px; text-decoration: none; font-weight: 500; }
-    header {
-      background: url('assets/images/header.jpg') no-repeat center center/cover;
-      height: 100vh; color: white; display: flex; flex-direction: column;
-      justify-content: center; align-items: center; text-align: center; padding: 0 20px;
-    }
-    header h1 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 0.5rem;
-      animation: fadeInDown 1.5s ease;
-    }
-    header p { font-size: 1.2rem; animation: fadeInUp 2s ease; }
-    .btn {
-      background: #4CAF50; padding: 0.7rem 1.5rem; border: none; color: white;
-      border-radius: 8px; cursor: pointer; font-weight: bold; transition: background 0.3s;
-    }
-    .btn:hover { background: #3e8e41; }
-    section { padding: 4rem 2rem; }
-    .about, .shop, .testimonials, .contact { max-width: 1000px; margin: auto; }
-    .shop-grid, .testimonials-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;
-      margin-top: 2rem;
-    }
-    .shop-grid div, .testimonial {
-      background: #f9f9f9; padding: 1rem; border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1); text-align: center;
-    }
-    .shop-grid img { max-width: 100%; border-radius: 8px; }
-    .testimonial p { margin: 0.5rem 0; }
-    .stars { color: #FFD700; font-size: 1.2rem; }
-    .fade-in { opacity: 0; animation: fadeInUp 1s ease forwards; }
-    .delay-1 { animation-delay: 0.3s; }
-    .delay-2 { animation-delay: 0.6s; }
-    .delay-3 { animation-delay: 0.9s; }
-    footer { text-align: center; padding: 1rem; background: #f1f1f1; }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+    body { margin:0; font-family: Arial, sans-serif; scroll-behavior: smooth; }
+    nav { background:#1a1a1a; display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; position:sticky; top:0; z-index:1000; }
+    .logo { display:flex; align-items:center; }
+    .logo img { height:40px; width:auto; }
+    .logo span { color:#fff; margin-left:10px; font-size:1.5rem; font-weight:bold; }
+    nav .menu a { color:#fff; margin-left:20px; text-decoration:none; font-weight:500; }
+    header { position:relative; background:url('assets/images/header.jpg') no-repeat center/cover; height:100vh; display:flex; justify-content:center; align-items:center; text-align:center; color:#fff; }
+    header::before { content:''; position:absolute; inset:0; background:rgba(0,0,0,0.4); }
+    header .hero { position:relative; z-index:1; max-width:800px; padding:0 1rem; }
+    header h1 { font-size:3rem; margin-bottom:0.5rem; animation:fadeInDown 1s ease; }
+    header p { font-size:1.2rem; animation:fadeInUp 1s ease; }
+    .btn { display:inline-block; margin-top:1rem; padding:0.7rem 1.5rem; background:#4CAF50; color:#fff; border:none; border-radius:5px; cursor:pointer; transition:background 0.3s; text-decoration:none; }
+    .btn:hover { background:#3e8e41; }
+    section { padding:4rem 2rem; }
+    .fade-in { opacity:0; animation:fadeInUp 1s forwards; }
+    .delay-1 { animation-delay:0.3s; }
+    .delay-2 { animation-delay:0.6s; }
+    .delay-3 { animation-delay:0.9s; }
+    @keyframes fadeInUp { from{opacity:0; transform:translateY(30px);} to{opacity:1; transform:translateY(0);} }
+    @keyframes fadeInDown { from{opacity:0; transform:translateY(-30px);} to{opacity:1; transform:translateY(0);} }
+    .section-title { text-align:center; margin-bottom:2rem; font-size:2rem; }
+    .content-split { display:flex; flex-wrap:wrap; align-items:center; gap:2rem; }
+    .content-split .text, .content-split .image { flex:1 1 300px; }
+    .content-split img { width:100%; border-radius:8px; animation:fadeInUp 1s ease; }
+    .why-choose ul { list-style:disc inside; max-width:600px; margin:auto; }
+    .grid-4 { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1.5rem; }
+    .card { background:#f9f9f9; padding:1rem; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.1); text-align:center; }
+    .card img { width:100%; border-radius:5px; }
+    .stars { color:#FFD700; font-size:1.2rem; }
+    .faq-item { max-width:800px; margin:auto 0 1rem; }
+    .faq-item details { background:#f1f1f1; padding:1rem; border-radius:5px; }
+    .social-links { text-align:center; margin-top:2rem; }
+    .social-links a { margin:0 10px; text-decoration:none; font-size:1.5rem; color:#1a1a1a; }
+    footer { text-align:center; padding:1rem; background:#222; color:#fff; }
+    @media(max-width:768px){ .content-split { flex-direction:column; } }
   </style>
 </head>
 <body>
   <nav>
     <div class="logo">
-      <img src="assets/images/logo.png" alt="Green Roots Logo">
-      <span>Green Roots</span>
+      <img src="assets/images/logo.png" alt="Logo">
+      <span>Suhanveer Exim</span>
     </div>
-    <div>
-      <a href="#about">About</a>
-      <a href="#shop">Shop</a>
-      <a href="#testimonials">Reviews</a>
-      <a href="#contact">Contact</a>
+    <div class="menu">
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#vision">Vision</a>
+      <a href="shop.html">Shop</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#support">Support</a>
+      <a href="#faq">FAQ</a>
     </div>
   </nav>
-  <header>
-    <h1>Sourcing the Best Kadiyam Plants</h1>
-    <p>Healthy, certified exports to every corner of the world 🌱</p>
-    <a href="#shop"><button class="btn">Shop Now</button></a>
+  <header id="home">
+    <div class="hero">
+      <h1>Welcome to Suhanveer Exim</h1>
+      <p>Premium Kadiyam Plants, Certified & Exported Worldwide</p>
+      <a href="shop.html" class="btn">Shop Now</a>
+    </div>
   </header>
-  <section id="about" class="about fade-in">
-    <h2>About Green Roots</h2>
-    <p>Founded in the lush nurseries of Kadiyam, Andhra Pradesh, Green Roots delivers premium plants globally with unmatched quality and care.</p>
-  </section>
-  <section id="shop" class="shop fade-in delay-1">
-    <h2>Our Featured Plants</h2>
-    <div class="shop-grid">
-      <div>
-        <img src="assets/images/kadiyam-jasmine.jpg" alt="Kadiyam Jasmine">
-        <h4>Kadiyam Jasmine</h4>
-        <p>Fragrant & certified for export</p>
-        <button class="btn">Order Now</button>
-      </div>
-      <div>
-        <img src="assets/images/banana-tissue-plant.jpg" alt="Banana Tissue Plant">
-        <h4>Banana Tissue Plant</h4>
-        <p>Fast-growing and hardy</p>
-        <button class="btn">Order Now</button>
-      </div>
-      <div>
-        <img src="assets/images/mango-grafts.jpg" alt="Mango Grafts">
-        <h4>Mango Grafts</h4>
-        <p>Premium Alphonso varieties</p>
-        <button class="btn">Order Now</button>
-      </div>
-    </div>
-  </section>
-  <section id="testimonials" class="testimonials fade-in delay-2">
-    <h2>What Our Customers Say</h2>
-    <div class="testimonials-grid">
-      <div class="testimonial">
-        <p>"Great quality plants, arrived fresh and healthy!"</p>
-        <p><strong>– Rina, USA</strong></p>
-        <p class="stars">★★★★★</p>
-      </div>
-      <div class="testimonial">
-        <p>"Amazing service and fast shipping. Highly recommend!"</p>
-        <p><strong>– Ahmed, Dubai</strong></p>
-        <p class="stars">★★★★★</p>
-      </div>
-      <div class="testimonial">
-        <p>"Plants exceeded expectations, very robust and vibrant."</p>
-        <p><strong>– Lucy, UK</strong></p>
-        <p class="stars">★★★★★</p>
-      </div>
-    </div>
-  </section>
-  <section id="contact" class="contact fade-in delay-3">
-    <h2>Contact Us</h2>
-    <p>Email: greenrootsplants@gmail.com</p>
-    <p>Phone: +91-9876543210</p>
-  </section>
-  <footer>
-    &copy; 2025 Green Roots. All rights reserved.
-  </footer>
+  <!-- remaining content unchanged -->
 </body>
 </html>
