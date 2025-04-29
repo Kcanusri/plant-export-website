@@ -29,7 +29,7 @@
     .content-split { display:flex; flex-wrap:wrap; align-items:center; gap:2rem; }
     .content-split .text, .content-split .image { flex:1 1 300px; }
     .content-split img { width:100%; border-radius:8px; animation:fadeInUp 1s ease; }
-    .why-choose ul { list-style:disc inside; max-width:600px; margin:auto; }
+    .why-choose p { max-width:800px; margin:auto; line-height:1.6; }
     .grid-4 { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1.5rem; }
     .card { background:#f9f9f9; padding:1rem; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.1); text-align:center; }
     .card img { width:100%; border-radius:5px; }
@@ -62,9 +62,76 @@
     <div class="hero">
       <h1>Welcome to Suhanveer Exim</h1>
       <p>Premium Kadiyam Plants, Certified & Exported Worldwide</p>
-      <a href="shop.html" class="btn">Shop Now</a>
+      <a href="#about" class="btn">Learn More</a>
     </div>
   </header>
-  <!-- remaining content unchanged -->
+  <section id="about" class="fade-in delay-1">
+    <h2 class="section-title">About Us</h2>
+    <div class="content-split">
+      <div class="text">
+        <p>Nestled in the heart of Kadiyam, Andhra Pradesh, Suhanveer Exim carries forward a rich heritage of horticultural excellence. Kadiyam is renowned for its thriving nurseries and high-quality plants, and our company is proud to source our offerings direct from Kadiyam. With generations of growers perfecting the craft, we deliver true heritage plants rooted in tradition. Each plant we export is carefully selected from this famous nursery belt, ensuring that customers receive the freshest, healthiest specimens. At Suhanveer Exim, quality is our top priority. We specialize in a diverse range of greenery, from vibrant ornamental plants and stately landscaping trees to versatile indoor and outdoor varieties. Our collection even includes the latest air-purifying plants for healthier living spaces. Through rigorous cultivation and selection, we promise only premium-quality, fresh nursery plants that are ready to flourish in their new homes. Every sapling is nurtured with meticulous care — healthy, well-rooted, and plantation-ready.</p>
+      </div>
+      <div class="image">
+        <img src="assets/images/about-pic.jpg" alt="About Image">
+      </div>
+    </div>
+  </section>
+  <section id="vision" class="fade-in delay-2">
+    <h2 class="section-title">Our Vision & Mission</h2>
+    <div class="content-split">
+      <div class="text">
+        <p>“Grow Green, Breathe Clean”</p>
+        <p>To make Earth green again by spreading the love of living plants far and wide. We strive to fill every home, garden, and cityscape with lush greenery—one sapling at a time—to restore fresh oxygen, enrich lives, and nurture a healthier planet.</p>
+      </div>
+      <div class="image">
+        <img src="assets/images/vision-pic.jpg" alt="Vision Image">
+      </div>
+    </div>
+  </section>
+  <section id="why" class="fade-in delay-3">
+    <h2 class="section-title">Why Choose Us?</h2>
+    <div class="why-choose">
+      <p>We believe in sustainability and spreading greenery for all. Our farming practices are eco-friendly and responsible, using organic methods and water-wise cultivation to nurture the plants we love. By promoting affordable pricing and value, we make it easy for landscapers, nurseries, and hobbyists alike to enhance their projects and spaces with lush greenery. With Suhanveer Exim, going green doesn’t break the bank — it brings communities together in the shared goal of a greener planet. Our passion for nature drives everything we do. We see every exported tree or houseplant as a way to bring the purity of green beauty into homes, gardens, and projects. It’s more than commerce — it’s a mission to connect people with nature’s calming presence. We are committed to inspiring a deeper appreciation for plants, helping our customers experience the joy and serenity that healthy, living greenery can provide.</p>
+    </div>
+  </section>
+  <section id="best-sellers" class="fade-in delay-1">
+    <h2 class="section-title">Best Selling Plants</h2>
+    <div class="grid-4">
+      <div class="card"><img src="assets/images/plant1.jpg" alt="Plant 1"><h4>Jasmine</h4><p>Fragrant & Certified</p><a href="#support" class="btn">Order Now</a></div>
+      <div class="card"><img src="assets/images/plant2.jpg" alt="Plant 2"><h4>Banana Tissue</h4><p>Fast Growing</p><a href="#support" class="btn">Order Now</a></div>
+      <div class="card"><img src="assets/images/plant3.jpg" alt="Plant 3"><h4>Mango Grafts</h4><p>Alphonso Variety</p><a href="#support" class="btn">Order Now</a></div>
+      <div class="card"><img src="assets/images/plant4.jpg" alt="Plant 4"><h4>Rose Saplings</h4><p>Vibrant Colors</p><a href="#support" class="btn">Order Now</a></div>
+    </div>
+  </section>
+  <section id="reviews" class="fade-in delay-2">
+    <h2 class="section-title">Customer Reviews</h2>
+    <div class="grid-4">
+      <div class="card testimonial"><p>"Great quality plants that arrived fresh and vibrant!"</p><p><strong>– Rina, USA</strong></p><p class="stars">★★★★★</p></div>
+      <div class="card testimonial"><p>"Exceptional service and speedy delivery. Highly recommend!"</p><p><strong>– Ahmed, Dubai</strong></p><p class="stars">★★★★★</p></div>
+      <div class="card testimonial"><p>"Plants were healthy and well-packaged. Fantastic experience."</p><p><strong>– Lucy, UK</strong></p><p class="stars">★★★★★</p></div>
+      <div class="card testimonial"><p>"Five stars for quality and customer care!"</p><p><strong>– Marco, Italy</strong></p><p class="stars">★★★★★</p></div>
+      <div class="card testimonial"><p>"Loved the variety and the freshness of every plant."</p><p><strong>– Chen, China</strong></p><p class="stars">★★★★★</p></div>
+    </div>
+  </section>
+  <section id="support" class="fade-in delay-3">
+    <h2 class="section-title">Support</h2>
+    <p>Need help? Contact us:</p>
+    <p>Phone: <a href="tel:+919876543210">+91-9876543210</a></p>
+    <p>Email: <a href="mailto:suhanveerexim@gmail.com">suhanveerexim@gmail.com</a></p>
+  </section>
+  <section id="faq" class="fade-in">
+    <h2 class="section-title">FAQ</h2>
+    <div class="faq-item"><details><summary>What is the minimum order quantity?</summary><p>Our minimum order is 50 plants per variety.</p></details></div>
+    <div class="faq-item"><details><summary>How long does shipping take?</summary><p>Shipping typically takes 5–7 business days.</p></details></div>
+    <div class="faq-item"><details><summary>Do you provide custom packaging?</summary><p>Yes, we offer custom packaging on request at additional cost.</p></details></div>
+  </section>
+  <section id="social" class="fade-in delay-1 social-links">
+    <h2 class="section-title">Follow Us</n>
+    <a href="https://instagram.com/yourpage" target="_blank">Instagram</a>
+    <a href="https://facebook.com/yourpage" target="_blank">Facebook</a>
+  </section>
+  <footer>
+    &copy; 2025 Suhanveer Exim. All Rights Reserved.
+  </footer>
 </body>
 </html>
