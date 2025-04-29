@@ -3,25 +3,160 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Green Roots - Plant Export</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Green Roots | Plant Export</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: url('https://images.unsplash.com/photo-1605092814535-2f2e6c6a7442') no-repeat center center/cover;
+      height: 100vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      animation: fadeInDown 1.5s ease;
+    }
+    header p {
+      font-size: 1.2rem;
+      animation: fadeInUp 2s ease;
+    }
+    nav {
+      background: #1a1a1a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .btn {
+      background: #4CAF50;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #3e8e41;
+    }
+    section {
+      padding: 4rem 2rem;
+    }
+    .about, .shop, .contact {
+      max-width: 1000px;
+      margin: auto;
+    }
+    .shop-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .shop-grid div {
+      background: #f9f9f9;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .shop-grid img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #f1f1f1;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
+
+  <nav>
+    <div style="color:white; font-weight:bold; font-size: 1.2rem;">green roots</div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#shop">Shop</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
   <header>
-    <h1>Green Roots</h1>
-    <p>Connecting Nature to the World 🌱</p>
+    <h1>Sourcing the Best Kadyam Plants</h1>
+    <p>Healthy, certified exports to every corner of the world 🌱</p>
+    <br />
+    <a href="#shop"><button class="btn">Shop Now</button></a>
   </header>
 
-  <main>
-    <h2>Welcome to Our Plant Export Service</h2>
-    <p>We export healthy, certified plants worldwide with care and love.</p>
-    <button onclick="alert('Thanks for visiting!')">Click Me</button>
-  </main>
+  <section id="about" class="about">
+    <h2>The Story Behind Green Roots' Creation</h2>
+    <p>Founded in Andhra, our mission is to connect nature to the world. We believe in quality, certification, and care.</p>
+    <p><em>- Founder's Name</em></p>
+  </section>
+
+  <section id="shop" class="shop">
+    <h2>Our Featured Plants</h2>
+    <div class="shop-grid">
+      <div>
+        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb" alt="Plant 1">
+        <h4>Kadyam Jasmine</h4>
+        <p>Fragrant & certified for export</p>
+        <button class="btn">Order Now</button>
+      </div>
+      <div>
+        <img src="https://images.unsplash.com/photo-1592906200844-bb74c84eebb3" alt="Plant 2">
+        <h4>Banana Tissue Plant</h4>
+        <p>Fast-growing and hardy</p>
+        <button class="btn">Order Now</button>
+      </div>
+      <div>
+        <img src="https://images.unsplash.com/photo-1615485925278-b3b78997cdb9" alt="Plant 3">
+        <h4>Mango Grafts</h4>
+        <p>Premium Alphonso varieties</p>
+        <button class="btn">Order Now</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: greenrootsplants@gmail.com</p>
+    <p>Phone: +91-9876543210</p>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Green Roots. All rights reserved.</p>
+    &copy; 2025 Green Roots. All rights reserved.
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
