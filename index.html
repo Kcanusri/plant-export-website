@@ -1,142 +1,138 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Combined Web Page</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suhanveer Exim | Plant Export</title>
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; scroll-behavior: smooth; }
+    nav { background:#1a1a1a; display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; position:sticky; top:0; z-index:1000; }
+    .logo { display:flex; align-items:center; }
+    .logo img { height:40px; width:auto; }
+    .logo span { color:#fff; margin-left:10px; font-size:1.5rem; font-weight:bold; }
+    nav .menu a { color:#fff; margin-left:20px; text-decoration:none; font-weight:500; }
+    header { position:relative; background:url('assets/images/header.jpg') no-repeat center/cover; height:100vh; display:flex; justify-content:center; align-items:center; text-align:center; color:#fff; }
+    header::before { content:''; position:absolute; inset:0; background:rgba(0,0,0,0.4); }
+    header .hero { position:relative; z-index:1; max-width:800px; padding:0 1rem; }
+    header h1 { font-size:3rem; margin-bottom:0.5rem; animation:fadeInDown 1s ease; }
+    header p { font-size:1.2rem; animation:fadeInUp 1s ease; }
+    .btn { display:inline-block; margin-top:1rem; padding:0.7rem 1.5rem; background:#4CAF50; color:#fff; border:none; border-radius:5px; cursor:pointer; transition:background 0.3s; text-decoration:none; }
+    .btn:hover { background:#3e8e41; }
+    section { padding:4rem 2rem; }
+    .fade-in { opacity:0; animation:fadeInUp 1s forwards; }
+    .delay-1 { animation-delay:0.3s; }
+    .delay-2 { animation-delay:0.6s; }
+    .delay-3 { animation-delay:0.9s; }
+    @keyframes fadeInUp { from{opacity:0; transform:translateY(30px);} to{opacity:1; transform:translateY(0);} }
+    @keyframes fadeInDown { from{opacity:0; transform:translateY(-30px);} to{opacity:1; transform:translateY(0);} }
+    .section-title { text-align:center; margin-bottom:2rem; font-size:2rem; }
+    .content-split { display:flex; flex-wrap:wrap; align-items:center; gap:2rem; }
+    .content-split .text, .content-split .image { flex:1 1 300px; }
+    .content-split img { width:100%; border-radius:8px; animation:fadeInUp 1s ease; }
+    .why-choose p { max-width:800px; margin:auto; line-height:1.6; }
+    .grid-4 { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1.5rem; }
+    .card { background:#f9f9f9; padding:1rem; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.1); text-align:center; }
+    .card img { width:100%; border-radius:5px; }
+    .stars { color:#FFD700; font-size:1.2rem; }
+    .faq-item { max-width:800px; margin:auto 0 1rem; }
+    .faq-item details { background:#f1f1f1; padding:1rem; border-radius:5px; }
+    .social-links { text-align:center; margin-top:2rem; }
+    .social-links a { margin:0 10px; text-decoration:none; font-size:1.5rem; color:#1a1a1a; }
+    footer { text-align:center; padding:1rem; background:#222; color:#fff; }
+    @media(max-width:768px){ .content-split { flex-direction:column; } }
+  </style>
 </head>
-
 <body>
-  <!-- Header Section -->
-  <header>
-    <div class="logo">Logo</div>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#about-us">About Us</a></li>
-        <li><a href="#shop">Shop</a></li>
-        <li><a href="#support">Support</a></li>
-        <li><a href="#reviews">Reviews</a></li>
-        <li><a href="#faq">FAQ</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Sourcing the BEST Kadhiyaana Flaws</h1>
-      <button>Order Now</button>
-    </div>
-  </section>
-
-  <!-- About Us Section -->
-  <section class="about-us" id="about-us">
-    <h2>The Story Behind Company</h2>
-    <h3>About Us</h3>
-    <div class="images">
-      <img src="pic1.jpg" alt="Pic 1" class="pic1">
-      <img src="pic2.jpg" alt="Pic 2" class="pic2">
-    </div>
-  </section>
-
-  <!-- Why Us Section -->
-  <section class="why-us">
-    <h2>Why Us</h2>
-    <div class="reasons">
-      <div class="reason">
-        <img src="pic3.jpg" alt="Quality">
-        <p>Quality</p>
-      </div>
-      <div class="reason">
-        <img src="pic4.jpg" alt="Best">
-        <p>Best</p>
-      </div>
-      <div class="reason">
-        <img src="pic5.jpg" alt="Logo">
-        <p>Logo</p>
-      </div>
-    </div>
-    <img src="pic6.jpg" alt="Additional Image" class="pic6">
-  </section>
-
-  <!-- Vision & Mission Section -->
-  <section class="vision-mission">
-    <h2>Vision & Mission</h2>
-    <div class="content">
-      <div class="left">
-        <p>Ematted</p>
-      </div>
-      <div class="right">
-        <p>Behind with green area trees</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Top Best Sellers Section -->
-  <section class="top-sellers">
-    <h2>Top Best Sellers</h2>
-    <div class="products">
-      <div class="product">
-        <img src="product1.jpg" alt="Product 1">
-        <p>Product Name 1</p>
-      </div>
-      <div class="product">
-        <img src="product2.jpg" alt="Product 2">
-        <p>Product Name 2</p>
-      </div>
-      <div class="product">
-        <img src="product3.jpg" alt="Product 3">
-        <p>Product Name 3</p>
-      </div>
-      <div class="product">
-        <img src="product4.jpg" alt="Product 4">
-        <p>Product Name 4</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Customer Reviews Section -->
-  <section class="customer-reviews">
-    <h2>Customer Deliveries</h2>
-    <div class="reviews">
-      <div class="stars">
-        <span>★★★★★</span>
-      </div>
-      <p>Best B</p>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section class="faq" id="faq">
-    <h2>FAQ</h2>
-    <ul>
-      <li>1. Question 1?</li>
-      <li>2. Question 2?</li>
-      <li>3. Question 3?</li>
-      <li>4. Question 4?</li>
-      <li>5. Question 5?</li>
-    </ul>
-  </section>
-
-  <!-- Footer Section -->
-  <footer>
-    <div class="contact">
-      <div class="icon"><img src="phone-icon.jpg" alt="Phone Icon"></div>
-      <div class="icon"><img src="email-icon.jpg" alt="Email Icon"></div>
-      <div class="icon"><img src="address-icon.jpg" alt="Address Icon"></div>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#about-us">About Us</a></li>
-        <li><a href="#shop">Shop</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </footer>
+  <nav>
+    <div class="logo">
+      <img src="assets/images/logo.png" alt="Logo">
+      <span>Suhanveer Exim</span>
+    </div>
+    <div class="menu">
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#vision">Vision</a>
+      <a href="shop.html">Shop</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#support">Support</a>
+      <a href="#faq">FAQ</a>
+    </div>
+  </nav>
+  <header id="home">
+    <div class="hero">
+      <h1>Welcome to Suhanveer Exim</h1>
+      <p>Premium Kadiyam Plants, Certified & Exported Worldwide</p>
+      <a href="#about" class="btn">Learn More</a>
+    </div>
+  </header>
+  <section id="about" class="fade-in delay-1">
+    <h2 class="section-title">About Us</h2>
+    <div class="content-split">
+      <div class="text">
+        <p>Nestled in the heart of Kadiyam, Andhra Pradesh, Suhanveer Exim carries forward a rich heritage of horticultural excellence. Kadiyam is renowned for its thriving nurseries and high-quality plants, and our company is proud to source our offerings direct from Kadiyam. With generations of growers perfecting the craft, we deliver true heritage plants rooted in tradition. Each plant we export is carefully selected from this famous nursery belt, ensuring that customers receive the freshest, healthiest specimens. At Suhanveer Exim, quality is our top priority. We specialize in a diverse range of greenery, from vibrant ornamental plants and stately landscaping trees to versatile indoor and outdoor varieties. Our collection even includes the latest air-purifying plants for healthier living spaces. Through rigorous cultivation and selection, we promise only premium-quality, fresh nursery plants that are ready to flourish in their new homes. Every sapling is nurtured with meticulous care — healthy, well-rooted, and plantation-ready.</p>
+      </div>
+      <div class="image">
+        <img src="assets/images/about-pic.jpg" alt="About Image">
+      </div>
+    </div>
+  </section>
+  <section id="vision" class="fade-in delay-2">
+    <h2 class="section-title">Our Vision & Mission</h2>
+    <div class="content-split">
+      <div class="text">
+        <p>“Grow Green, Breathe Clean”</p>
+        <p>To make Earth green again by spreading the love of living plants far and wide. We strive to fill every home, garden, and cityscape with lush greenery—one sapling at a time—to restore fresh oxygen, enrich lives, and nurture a healthier planet.</p>
+      </div>
+      <div class="image">
+        <img src="assets/images/vision-pic.jpg" alt="Vision Image">
+      </div>
+    </div>
+  </section>
+  <section id="why" class="fade-in delay-3">
+    <h2 class="section-title">Why Choose Us?</h2>
+    <div class="why-choose">
+      <p>We believe in sustainability and spreading greenery for all. Our farming practices are eco-friendly and responsible, using organic methods and water-wise cultivation to nurture the plants we love. By promoting affordable pricing and value, we make it easy for landscapers, nurseries, and hobbyists alike to enhance their projects and spaces with lush greenery. With Suhanveer Exim, going green doesn’t break the bank — it brings communities together in the shared goal of a greener planet. Our passion for nature drives everything we do. We see every exported tree or houseplant as a way to bring the purity of green beauty into homes, gardens, and projects. It’s more than commerce — it’s a mission to connect people with nature’s calming presence. We are committed to inspiring a deeper appreciation for plants, helping our customers experience the joy and serenity that healthy, living greenery can provide.</p>
+    </div>
+  </section>
+  <section id="best-sellers" class="fade-in delay-1">
+    <h2 class="section-title">Best Selling Plants</h2>
+    <div class="grid-4">
+      <div class="card"><img src="assets/images/plant1.jpg" alt="Plant 1"><h4>Jasmine</h4><p>Fragrant & Certified</p><a href="#support" class="btn">Order Now</a></div>
+      <div class="card"><img src="assets/images/plant2.jpg" alt="Plant 2"><h4>Banana Tissue</h4><p>Fast Growing</p><a href="#support" class="btn">Order Now</a></div>
+      <div class="card"><img src="assets/images/plant3.jpg" alt="Plant 3"><h4>Mango Grafts</h4><p>Alphonso Variety</p><a href="#support" class="btn">Order Now</a></div>
+      <div class="card"><img src="assets/images/plant4.jpg" alt="Plant 4"><h4>Rose Saplings</h4><p>Vibrant Colors</p><a href="#support" class="btn">Order Now</a></div>
+    </div>
+  </section>
+  <section id="reviews" class="fade-in delay-2">
+    <h2 class="section-title">Customer Reviews</h2>
+    <div class="grid-4">
+      <div class="card testimonial"><p>"Great quality plants that arrived fresh and vibrant!"</p><p><strong>– Rina, USA</strong></p><p class="stars">★★★★★</p></div>
+      <div class="card testimonial"><p>"Exceptional service and speedy delivery. Highly recommend!"</p><p><strong>– Ahmed, Dubai</strong></p><p class="stars">★★★★★</p></div>
+      <div class="card testimonial"><p>"Plants were healthy and well-packaged. Fantastic experience."</p><p><strong>– Lucy, UK</strong></p><p class="stars">★★★★★</p></div>
+      <div class="card testimonial"><p>"Five stars for quality and customer care!"</p><p><strong>– Marco, Italy</strong></p><p class="stars">★★★★★</p></div>
+      <div class="card testimonial"><p>"Loved the variety and the freshness of every plant."</p><p><strong>– Chen, China</strong></p><p class="stars">★★★★★</p></div>
+    </div>
+  </section>
+  <section id="support" class="fade-in delay-3">
+    <h2 class="section-title">Support</h2>
+    <p>Need help? Contact us:</p>
+    <p>Phone: <a href="tel:+919876543210">+91-9876543210</a></p>
+    <p>Email: <a href="mailto:suhanveerexim@gmail.com">suhanveerexim@gmail.com</a></p>
+  </section>
+  <section id="faq" class="fade-in">
+    <h2 class="section-title">FAQ</h2>
+    <div class="faq-item"><details><summary>What is the minimum order quantity?</summary><p>Our minimum order is 50 plants per variety.</p></details></div>
+    <div class="faq-item"><details><summary>How long does shipping take?</summary><p>Shipping typically takes 5–7 business days.</p></details></div>
+    <div class="faq-item"><details><summary>Do you provide custom packaging?</summary><p>Yes, we offer custom packaging on request at additional cost.</p></details></div>
+  </section>
+  <section id="social" class="fade-in delay-1 social-links">
+    <h2 class="section-title">Follow Us</n>
+    <a href="https://instagram.com/yourpage" target="_blank">Instagram</a>
+    <a href="https://facebook.com/yourpage" target="_blank">Facebook</a>
+  </section>
+  <footer>
+    &copy; 2025 Suhanveer Exim. All Rights Reserved.
+  </footer>
 </body>
-
 </html>
