@@ -542,7 +542,35 @@ flexibility(document.documentElement);
 .quick-link-caption:hover {
   color: #1a3a29;
   text-decoration: underline;
-}</style>
+}
+
+/* Mobile Styles */
+/* Desktop: Show 3 blocks side-by-side */
+.wp-block-group.is-layout-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* ✅ Mobile: Stack vertically */
+@media (max-width: 768px) {
+  .wp-block-group.is-layout-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .wp-block-cover {
+    margin-bottom: 20px;
+  }
+
+  .wp-block-cover__inner-container {
+    text-align: center;
+  }
+}
+
+
+
+
+</style>
 		</head>
 
 <body itemtype="https://schema.org/WebPage" itemscope="itemscope" class="home wp-singular page-template-default page page-id-101 wp-custom-logo wp-theme-astra surecart-theme-light ast-desktop ast-plain-container ast-no-sidebar astra-4.10.1 ast-single-post ast-inherit-site-logo-transparent ast-theme-transparent-header ast-hfb-header ast-normal-title-enabled">
