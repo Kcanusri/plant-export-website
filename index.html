@@ -5841,44 +5841,90 @@ flexibility(document.documentElement);
 
 
 	<!-- Sairaj Code -->
-	<!-- Overlay -->
-	<div id="popup-overlay"></div>
+<!-- Overlay -->
+<div id="popup-overlay"></div>
 
-	<!-- Popup Form -->
-	<div id="popup-form">
-		<!-- Close Button -->
-		<span id="close-popup" style="
-		position: absolute;
-		top: 10px;
-		right: 15px;
-		font-size: 24px;
-		color: #999;
-		cursor: pointer;">&times;</span>
+<!-- Popup Form -->
+<div id="popup-form">
+	<!-- Close Button -->
+	<span id="close-popup" style="
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	font-size: 24px;
+	color: #999;
+	cursor: pointer;">&times;</span>
+	<!-- Heading -->
+  <h2 style="text-align: center; margin-bottom: 15px;">📬 Get in Touch</h2>
+	<!-- Form -->
+<form id="myForm">
+  <label>🧑 Your Name</label><br>
+  <input type="text" name="name" required><br><br>
 
-		<h2 style="text-align:center;">Get in Touch</h2>
-		</br>
+  <label>📞 Phone Number</label><br>
+  <input type="tel" name="phone" required><br><br>
 
-		<!-- Form -->
-		<form name="contact-form" id="contact-form">
-			<input type="hidden" name="form-name" value="contact-form">
+  <label>📧 Email Address</label><br>
+  <input type="email" name="email" required><br><br>
 
-			<label>📞 Phone Number</label><br>
-			<input type="tel" name="phone" required
-				style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc;"><br>
-
-			<label>📧 Email Address</label><br>
-			<input type="email" name="email" required
-				style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc;"><br>
-
-			<button type="submit"
-				style="padding: 10px 25px; background: green; color: white; border: none; border-radius: 5px; cursor: pointer;">Submit</button>
-		</form>
+  <button type="submit">Submit</button>
+</form>
 
 		<!-- Thank You -->
 		<div id="thank-you-message" style="display: none;">
 			<p style="font-size: 18px;">✅ Thank you! We’ll reach out soon.</p>
 		</div>
 	</div>
+<script>
+  document.getElementById("myForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // prevent default form submission
+
+    const form = e.target;
+    const data = new FormData(form);
+
+    fetch("https://script.google.com/macros/s/AKfycbyZxRdWvURpTXGdPgBqH282Ee1ee__vGzRp9F9VobHKCk3scZ8B2Jzaa7Wvo-1iafkk/exec", {
+      method: "POST",
+      body: data
+    })
+    .then(response => response.text())
+    .then(msg => {
+      // Hide form and show thank-you message
+      form.style.display = "none";
+      document.getElementById("thank-you-message").style.display = "block";
+    })
+    .catch(err => {
+      alert("❌ Something went wrong. Please try again.");
+      console.error(err);
+    });
+  });
+</script>
+<script>
+  // Show popup only if 10 minutes haven't passed since last shown
+  const popupBox = document.getElementById("popup-form");
+  const popupOverlay = document.getElementById("popup-overlay");
+  const closePopup = document.getElementById("close-popup");
+
+  const popupDelay = 4000; // 4 seconds
+  const cooldownMinutes = 10; // prevent for 10 minutes
+  const cooldownMillis = cooldownMinutes * 60 * 1000;
+
+  const lastShown = localStorage.getItem("popupLastShown");
+  const now = new Date().getTime();
+
+  if (!lastShown || now - lastShown > cooldownMillis) {
+    setTimeout(() => {
+      popupBox.style.display = "block";
+      popupOverlay.style.display = "block";
+      localStorage.setItem("popupLastShown", new Date().getTime());
+    }, popupDelay);
+  }
+
+  // Close popup
+  closePopup.addEventListener("click", () => {
+    popupBox.style.display = "none";
+    popupOverlay.style.display = "none";
+  });
+</script>
 
 
 	<a class="skip-link screen-reader-text" href="#content" title="Skip to content">
